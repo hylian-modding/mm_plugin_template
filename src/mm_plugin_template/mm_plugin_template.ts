@@ -1,13 +1,13 @@
 import {IPlugin, IModLoaderAPI} from 'modloader64_api/IModLoaderAPI';
-import {IOOTCore} from 'modloader64_api/OOT/OOTAPI';
+import * as API from "MajorasMask/API/Imports";
 import {InjectCore} from 'modloader64_api/CoreInjection';
 
-class oot_plugin_template implements IPlugin{
+class mm_plugin_template implements IPlugin{
 
     ModLoader!: IModLoaderAPI;
     pluginName?: string | undefined;
     @InjectCore()
-    core!: IOOTCore;
+    core!: API.IMMCore;
 
     preinit(): void {
     }
@@ -20,4 +20,4 @@ class oot_plugin_template implements IPlugin{
 
 }
 
-module.exports = oot_plugin_template;
+module.exports = mm_plugin_template;
