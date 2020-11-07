@@ -1,1 +1,1 @@
-# oot_plugin_template
+# mm_plugin_template
